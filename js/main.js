@@ -44,9 +44,6 @@ import { render } from "../controllers/declaration.js";
           .find(".footer")
           .removeClass("footer-0")
           .addClass("footer-" + currentIndex + "");
-
-        // Render Information
-        document.querySelector("#result").innerHTML = render();
       }
       if (currentIndex === 2) {
         form
@@ -141,3 +138,8 @@ import { render } from "../controllers/declaration.js";
     });
   }
 })(jQuery);
+
+document.querySelector(".signup-form .actions ul li:last-child a").onclick =
+  () => {
+    document.querySelector("#result").innerHTML = render();
+  };
